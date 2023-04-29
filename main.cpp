@@ -2,6 +2,7 @@
 
 
 int main() {
-    std::cout << "Hello World!" << std::endl;
+    auto result = (10 <=> 20) > 0;
+    std::cout << "Result of (10 <=> 20) > 0 = " << result << std::endl;
     return 0;
 }
