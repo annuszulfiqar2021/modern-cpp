@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.20.0)
 
-# set(CMAKE_TOOLCHAIN_FILE "/Volumes/dev/Architect-Github/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "/Volumes/dev/Architect-Github/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
+set(CMAKE_BUILD_TYPE Debug)
 
 project(Modern_CPP LANGUAGES CXX)
 
