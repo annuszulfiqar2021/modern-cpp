@@ -42,7 +42,7 @@ int vector_sum(const std::vector<int> &vec) {
     return result;
 }
 
- 
+
 int main(int argc, char** argv) {
     int LIMIT = 100;
     std::vector<int> test_vec(LIMIT);
