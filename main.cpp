@@ -1,6 +1,7 @@
 #include <iostream>
-#include <string>
 #include <memory>
+#include <string>
+#include <fmt/format.h>
 
 
 class Person {
@@ -14,7 +15,7 @@ public:
     ~Person() {
         std::cout << _name << " destroyed" << std::endl;
     }
-    std::string get_name() {
+    auto get_name() -> std::string {
         return _name;
     }
 };
@@ -25,11 +26,10 @@ int test(int argc, char** argv) {
     // std::cout << "My (indirect) name is " << pointer_to_annus->get_name() << std::endl;
 
     std::shared_ptr<Person> shared_pointer_to_annus = std::make_shared<Person>("Annus Zulfiqar");
-    std::cout << "My (indirect) name is " << shared_pointer_to_annus->get_name() << std::endl;
+    std::cout << fmt::format("My (indirect) name is {}\n", shared_pointer_to_annus->get_name());
 
     std::shared_ptr<Person> shared_pointer_to_shared_pointer_to_annus = shared_pointer_to_annus;
-    std::cout << "My (indirect-indirect) name is " << shared_pointer_to_shared_pointer_to_annus->get_name() << std::endl;
-
+    std::cout << fmt::format("My (indirect-indirect) name is {}\n", shared_pointer_to_shared_pointer_to_annus->get_name());
     return 0;
 }
 
@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
         test_vec.push_back(i);
     }
     std::cout << "Vector populated.." << std::endl;
-    std::cout << "Sum of the vector = " << vector_sum(test_vec) << std::endl;
-    std::cout << "Actual sum of the vector = " << int(LIMIT*(LIMIT+1)/2) << std::endl;
+    std::cout << fmt::format("Sum of the vector = {}\n", vector_sum(test_vec));
+    std::cout << fmt::format("Actual sum of the vector = {}\n", int(LIMIT*(LIMIT+1)/2));
     return 0;
 }
