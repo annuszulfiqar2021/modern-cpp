@@ -44,7 +44,7 @@ int vector_sum(const std::vector<int> &vec) {
 
  
 int main(int argc, char** argv) {
-    int LIMIT = 100000000;
+    int LIMIT = 100;
     std::vector<int> test_vec(LIMIT);
     std::cout << "Beginning to populate the vector.." << std::endl;
     for (int i=1; i<=LIMIT; i++) {
