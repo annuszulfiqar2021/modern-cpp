@@ -1,6 +1,6 @@
-export CLANG 		= /usr/bin/clang++
+export CLANG        = /usr/bin/clang++
 export CPP_STANDARD = c++20
-export EXECUTABLE 	= out
+export EXECUTABLE   = out
 
 .DEFAULT_GOAL      := build
 
